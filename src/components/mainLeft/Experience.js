@@ -78,7 +78,7 @@ function Experience() {
         <TextField
           id="outlined-basic"
           label="Descrition"
-          name="descrition[0]"
+          name="description[0]"
           variant="outlined"
           style={style}
           inputRef={register}
@@ -87,7 +87,7 @@ function Experience() {
         <TextField
           id="outlined-basic"
           label="Descrition"
-          name="descrition[1]"
+          name="description[1]"
           variant="outlined"
           style={style}
           inputRef={register}
@@ -95,7 +95,7 @@ function Experience() {
         />
         <hr />
 
-        <h4>Company 1</h4>
+        <h4>Company 2</h4>
 
         <TextField
           id="outlined-basic"
@@ -145,20 +145,20 @@ function Experience() {
         <TextField
           id="outlined-basic"
           label="Descrition"
-          name="descrition2[0]"
+          name="description2[0]"
           variant="outlined"
           style={style}
           inputRef={register}
-          defaultValue={content.experience.description[0]}
+          defaultValue={content.experience.description2[0]}
         />
         <TextField
           id="outlined-basic"
           label="Descrition"
-          name="descrition2[1]"
+          name="description2[1]"
           variant="outlined"
           style={style}
           inputRef={register}
-          defaultValue={content.experience.description[1]}
+          defaultValue={content.experience.description2[1]}
         />
         <Button
           type="submit"
@@ -173,6 +173,8 @@ function Experience() {
         <Button component={Link} to="/basic/addittional">
           Next
         </Button>
+        <Link to='/'/>
+        <Button component={Link} to='/basic/Education'>Preview</Button>
       </form>
     </div>
   );

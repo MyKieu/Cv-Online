@@ -7,6 +7,8 @@ import logo from '../asset/logoCV.jpg';
 import logoClick from '../asset/logoClick.jpg';
 import ContentProvider from 'contexts/context';
 
+
+
 function Templates() {
   const useStyles = makeStyles({
     headerLink: {
@@ -16,10 +18,11 @@ function Templates() {
     },
   });
   const classes = useStyles();
-  
+ 
 return (
   <div className= "left">
       <div className='headerLeft'>
+
           <Link to="/" style={{ textAlign: "left" }}>
               <img src={logo} alt="logo" className="img2" />
           </Link>
@@ -39,8 +42,11 @@ return (
 }
 
 function App() {
+ 
   return (
+  
     <div className="App">
+  
       <ContentProvider>
         <BrowserRouter>
           <Switch>
@@ -50,6 +56,7 @@ function App() {
         </BrowserRouter>
         <Right />
       </ContentProvider>
+      
     </div>
   );
 }

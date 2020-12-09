@@ -9,7 +9,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import pink from "@material-ui/core/colors/pink";
 import green from "@material-ui/core/colors/green";
 import ClearIcon from "@material-ui/icons/Clear";
-
 const useStyles = makeStyles((theme) => ({
   root: {
     position: "absolute",
@@ -28,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
     margin: 10,
   },
 }));
-
 function Right() {
   const { setContent } = useContext(Context);
   const classes = useStyles();
@@ -42,10 +40,7 @@ function Right() {
       skill: [],
     });
   };
-  const handleSaveToPDF = (event) => {
-    event.preventDefault();
-    window.print();
-  };
+ 
   return (
     <div className="right">
       <div className={classes.root}>
@@ -56,17 +51,10 @@ function Right() {
             </Avatar>
           </Tooltip>
         </Link>
-        <Link href="#" onClick={handleSaveToPDF}>
-          <Tooltip title="Save to PDF" placement="right">
-            <Avatar className={classes.green}>
-              <PictureAsPdfIcon />
-            </Avatar>
-          </Tooltip>
-        </Link>
+
       </div>
       <Paper />
     </div>
   );
 }
-
 export default Right;

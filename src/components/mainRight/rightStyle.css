@@ -1,10 +1,10 @@
 .paper {
-    background: white;
+    background: rgb(255, 255, 255);
     display: block;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 0.5cm;
-    box-shadow: 0 0 0.5cm #7b7d7d;
+    box-shadow: 0 0 0.5cm #ffffff;
     width: 21cm;
     height: 29.7cm;
 }

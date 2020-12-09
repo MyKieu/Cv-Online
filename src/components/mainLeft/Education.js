@@ -31,7 +31,7 @@ function Education() {
         <TextField
           id="outlined-basic"
           label="Institution"
-          name="institution"
+          name="institition"
           variant="outlined"
           inputRef={register}
           style={style}
@@ -86,6 +86,8 @@ function Education() {
         <Button component={Link} to="/basic/Experience">
            Next
         </Button>
+        <Link to ='/'></Link>
+        <Button component={Link} to='/basic/Header'>Preview</Button>
       </form>
     </div>
   );

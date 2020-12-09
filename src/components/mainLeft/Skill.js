@@ -2,6 +2,7 @@ import { Button, TextField } from '@material-ui/core'
 import { Context } from 'contexts/context';
 import React, { useContext, useState } from 'react'
 import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom';
 import './style.css';
 const style = {
     marginTop: 12,
@@ -75,6 +76,8 @@ function Skill() {
                     {Text}
 
                 </Button>
+                <Link to="/"></Link>
+           <Button component={Link} to="/basic/Experience">Preview</Button>
             </form>
         </div>
     )

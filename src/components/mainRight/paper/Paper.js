@@ -1,22 +1,32 @@
-import React from 'react'
-import RightEducation from './RightEducation'
-import RightExperience from './RightExperience'
-import RightHeader from './RightHeader'
-import RightSkill from './RightSkill'
-import '../rightStyle.css';
-
+import React from "react";
+import RightEducation from "./RightEducation";
+import RightExperience from "./RightExperience";
+import RightHeader from "./RightHeader";
+import RightSkill from "./RightSkill";
+import "../rightStyle.css";
+import PdfContainer from "contents/SavePDF/PdfContainer";
+import { savePDF } from "@progress/kendo-react-pdf";
 function Paper() {
-    return (
-        <div className="paper">
-            <div style={{size: 'A4'}}>
-                <RightHeader />
-                <RightEducation />
-                <RightExperience />
-                <RightSkill />
-            </div>
+  const createPdf = (html) => {
+    savePDF(html, {
+      paperSize: "A4",
+      fileName: "cv.pdf",
+      margin: 3,
+    });
+  };
 
-        </div>
-    )
+  return (
+    <div className="paper">
+      <div style={{ size: "A4" }}>
+        <PdfContainer createPdf={createPdf}>
+          <RightHeader />
+          <RightEducation />
+          <RightExperience />
+          <RightSkill />
+        </PdfContainer>
+      
+      </div>
+    </div>
+  );
 }
-
-export default Paper
+export default Paper;
