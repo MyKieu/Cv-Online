@@ -19,13 +19,13 @@ function Header() {
     removeData();
     updateHeaderData(data);
   };
-  const handleDelete= (dataLocal) => {
-    
-    localStorage.clear(dataLocal);
+  const handleDelete= (event) => {
+    event.preventDefault();
     setContent({
+      ...content,
      header:{},
     });
-    
+    window.location.reload();
   };
   return (
     <div className="">
@@ -122,7 +122,7 @@ function Header() {
           onChange={handleSubmit(onSubmit)}
         />
         <Link to="/"></Link>
-        <Button component={Link} to="/basic/Education">
+        <Button   style={style} component={Link} to="/basic/Education">
           Next
         </Button>
         <Button
@@ -131,7 +131,7 @@ function Header() {
           color="secondary"
           disableElevation
           style={style}
-          onclick={handleDelete}
+          onClick={handleDelete}
         >
           Delete
         </Button>

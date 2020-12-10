@@ -111,7 +111,7 @@ function Basic() {
               Skills
             </Button>
           </div>
-          <hr className="hr" />
+          
           <div className="formsSection">
             <Switch>
               <Route path="/basic/header">

@@ -4,10 +4,15 @@ import Avatar from "@material-ui/core/Avatar";
 import PictureAsPdfIcon from "@material-ui/icons/PictureAsPdf";
 import { Link } from "@material-ui/core";
 
+ 
+
 export default (props) => {
  const style={
-   background:'pink'
- }
+   background:'pink',
+   marginTop:'10px',
+   marginLeft:'10px'
+ } 
+ 
   const bodyRef = React.createRef();
   const createPdf = () => props.createPdf(bodyRef.current);
   return (
@@ -16,7 +21,7 @@ export default (props) => {
        {/* <button onClick={createPdf}>Create PDF</button> */}
        <Link href="#" onClick={createPdf}>
           <Tooltip title="Save to PDF" placement="right">
-            <Avatar style={style}>
+            <Avatar   style={style}>
               <PictureAsPdfIcon />
             </Avatar>
           </Tooltip>

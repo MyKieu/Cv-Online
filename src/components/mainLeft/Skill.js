@@ -10,7 +10,7 @@ const style = {
     marginRight: 8
 }
 function Skill() {
-    const {content , updateSkillData, removeData} = useContext(Context);
+    const {content , updateSkillData, removeData,setContent} = useContext(Context);
     const [Text, setText] = useState("Add")
     const {register, handleSubmit} = useForm();
     const onSubmit = (data) => {
@@ -20,6 +20,14 @@ function Skill() {
         setText('Update');
 
         
+    }
+    const handleDeleteSkill=(e)=>{
+e.preventDefault();
+setContent({
+    ...content,
+    skill:[]
+})
+window.location.reload();
     }
     return (
         <div className="skill">
@@ -72,12 +80,24 @@ function Skill() {
                 variant="contained" 
                 color="secondary" 
                 disableElevation
-                style={style}>
+                style={style}
+                
+                >
                     {Text}
 
                 </Button>
                 <Link to="/"></Link>
-           <Button component={Link} to="/basic/Experience">Preview</Button>
+           <Button style={style} component={Link} to="/basic/Experience">Preview</Button>
+           <Button  
+                type="submit" 
+                variant="contained" 
+                color="secondary" 
+                disableElevation
+                style={style}
+                onClick={handleDeleteSkill}
+                >
+                    Delete
+                </Button>
             </form>
         </div>
     )

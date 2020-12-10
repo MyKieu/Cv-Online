@@ -1,6 +1,5 @@
 import Tooltip from "@material-ui/core/Tooltip";
 import Avatar from "@material-ui/core/Avatar";
-import PictureAsPdfIcon from "@material-ui/icons/PictureAsPdf";
 import { Link } from "@material-ui/core";
 import { Context } from "contexts/context";
 import React, { useContext } from "react";
@@ -9,13 +8,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import pink from "@material-ui/core/colors/pink";
 import green from "@material-ui/core/colors/green";
 import ClearIcon from "@material-ui/icons/Clear";
+import "./rightStyle.css";
+import { savePDF } from "@progress/kendo-react-pdf";
+import PdfContainer from "contents/SavePDF/PdfContainer";
 const useStyles = makeStyles((theme) => ({
-  root: {
-    position: "absolute",
-    "& > *": {
-      margin: 0,
-    },
-  },
+ 
   pink: {
     color: theme.palette.getContrastText(pink[500]),
     backgroundColor: pink[500],
@@ -27,6 +24,13 @@ const useStyles = makeStyles((theme) => ({
     margin: 10,
   },
 }));
+const createPdf = (html) => {
+  savePDF(html, {
+    paperSize: "A4",
+    fileName: "cv.pdf",
+    margin: 3,
+  });
+};
 function Right() {
   const { setContent } = useContext(Context);
   const classes = useStyles();
@@ -40,10 +44,11 @@ function Right() {
       skill: [],
     });
   };
- 
+
   return (
     <div className="right">
-      <div className={classes.root}>
+
+      <div >
         <Link href="#" onClick={handleDeleteDate}>
           <Tooltip title="Delete All Data" placement="right">
             <Avatar className={classes.pink}>
@@ -51,10 +56,22 @@ function Right() {
             </Avatar>
           </Tooltip>
         </Link>
+        
+        <Link href="/">
+          <Tooltip title="View" placement="right">
+            <Avatar className={classes.green}></Avatar>
+          </Tooltip>
+        </Link>
 
+        <PdfContainer className='pdf'  createPdf={createPdf}>
+          <Paper />
+        </PdfContainer>
       </div>
-      <Paper />
-    </div>
+      
+     
+        
+        </div>
+    
   );
 }
 export default Right;

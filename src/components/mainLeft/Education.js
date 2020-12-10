@@ -1,4 +1,4 @@
-import { Button, TextField } from "@material-ui/core";
+import { Button, StepContent, TextField } from "@material-ui/core";
 import { Context } from "contexts/context";
 import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
@@ -13,12 +13,23 @@ function Education() {
   const { content, updateEducationData, removeData } = useContext(Context);
   const [Text, setText] = useState("add");
   const { register, handleSubmit } = useForm();
+  const { setContent } = useContext(Context);
+
   const onSubmit = (data) => {
     console.log(data);
     updateEducationData(data);
     setText("update");
     removeData();
   };
+  const handleDeleteEdu =(event)=>{
+    event.preventDefault();
+    setContent({
+      ...content,
+      education:{},
+    })
+
+window.location.reload();
+  }
   return (
     <div className="education">
       <h2>Education</h2>
@@ -83,11 +94,21 @@ function Education() {
           {Text}
         </Button>
         <Link to="/"></Link>
-        <Button component={Link} to="/basic/Experience">
+        <Button   style={style} component={Link} to="/basic/Experience">
            Next
         </Button>
         <Link to ='/'></Link>
-        <Button component={Link} to='/basic/Header'>Preview</Button>
+        <Button   style={style} component={Link} to='/basic/Header'>Preview</Button>
+        <Button
+          type="submit"
+          variant="contained"
+          color="secondary"
+          disableElevation
+          style={style}
+          onClick ={handleDeleteEdu}
+        >
+          Delete
+        </Button>
       </form>
     </div>
   );
