@@ -32,7 +32,7 @@ return (
           <Button
             className={classes.headerLink}
             component={Link}
-            to="/basic/header"
+            to="/cv-online/basic/header"
           >
             Create CV
           </Button>

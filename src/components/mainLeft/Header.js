@@ -61,7 +61,7 @@ function Header() {
           label="Image"
           variant="outlined"
           name="img"
-          className='img'
+          className='imgg1'
           defaultValue={content.header.img}
           inputRef={register}
           style={style}

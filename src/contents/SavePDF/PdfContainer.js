@@ -8,7 +8,7 @@ import { Link } from "@material-ui/core";
 
 export default (props) => {
  const style={
-   background:'pink',
+   background:'blue',
    marginTop:'10px',
    marginLeft:'10px'
  } 
@@ -19,7 +19,7 @@ export default (props) => {
     <section className="pdf-container">
       <section className="pdf-toolbar">
        {/* <button onClick={createPdf}>Create PDF</button> */}
-       <Link href="#" onClick={createPdf}>
+       <Link href="/cv-online" onClick={createPdf}>
           <Tooltip title="Save to PDF" placement="right">
             <Avatar   style={style}>
               <PictureAsPdfIcon />
