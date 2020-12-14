@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/MyKieu/cv-online.git/static/css/main.d88bb44f.chunk.css",
+    "main.js": "/MyKieu/cv-online.git/static/js/main.9089ef61.chunk.js",
+    "main.js.map": "/MyKieu/cv-online.git/static/js/main.9089ef61.chunk.js.map",
+    "runtime-main.js": "/MyKieu/cv-online.git/static/js/runtime-main.8a984a40.js",
+    "runtime-main.js.map": "/MyKieu/cv-online.git/static/js/runtime-main.8a984a40.js.map",
+    "static/js/2.fc26626f.chunk.js": "/MyKieu/cv-online.git/static/js/2.fc26626f.chunk.js",
+    "static/js/2.fc26626f.chunk.js.map": "/MyKieu/cv-online.git/static/js/2.fc26626f.chunk.js.map",
+    "static/js/3.00f78bbf.chunk.js": "/MyKieu/cv-online.git/static/js/3.00f78bbf.chunk.js",
+    "static/js/3.00f78bbf.chunk.js.map": "/MyKieu/cv-online.git/static/js/3.00f78bbf.chunk.js.map",
+    "index.html": "/MyKieu/cv-online.git/index.html",
+    "static/css/main.d88bb44f.chunk.css.map": "/MyKieu/cv-online.git/static/css/main.d88bb44f.chunk.css.map",
+    "static/js/2.fc26626f.chunk.js.LICENSE.txt": "/MyKieu/cv-online.git/static/js/2.fc26626f.chunk.js.LICENSE.txt",
+    "static/media/logoCV.06667e12.jpg": "/MyKieu/cv-online.git/static/media/logoCV.06667e12.jpg",
+    "static/media/logoClick.c5a0e1b1.jpg": "/MyKieu/cv-online.git/static/media/logoClick.c5a0e1b1.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8a984a40.js",
+    "static/js/2.fc26626f.chunk.js",
+    "static/css/main.d88bb44f.chunk.css",
+    "static/js/main.9089ef61.chunk.js"
+  ]
+}
