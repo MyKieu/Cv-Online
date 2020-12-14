@@ -178,12 +178,12 @@ function Experience() {
         >
           {Text}
         </Button>
-        <Link to="/"></Link>
-        <Button style={style} component={Link} to="/basic/addittional">
+        <Link to="/cv-online"></Link>
+        <Button style={style} component={Link} to="/cv-online/basic/addittional">
           Next
         </Button>
-        <Link to='/'/>
-        <Button style={style} component={Link} to='/basic/Education'>Preview</Button>
+        <Link to='/cv-online'/>
+        <Button style={style} component={Link} to='/cv-online/basic/Education'>Preview</Button>
         <Button
           type="submit"
           variant="contained"

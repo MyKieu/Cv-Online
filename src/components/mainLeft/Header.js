@@ -56,7 +56,17 @@ function Header() {
           style={style}
           onChange={handleSubmit(onSubmit)}
         /> */}
-  
+          <TextField
+          id="outlined-basic"
+          label="Image"
+          variant="outlined"
+          name="img"
+          className='img'
+          defaultValue={content.header.img}
+          inputRef={register}
+          style={style}
+          onChange={handleSubmit(onSubmit)}
+        />
         <select 
           className='gender'
           style={style}
@@ -64,7 +74,7 @@ function Header() {
           ref={register}
           onChange={handleSubmit(onSubmit)}
         >
-          
+          <option value='' disabled selected>Choose your gender</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
           
@@ -121,8 +131,8 @@ function Header() {
           style={style}
           onChange={handleSubmit(onSubmit)}
         />
-        <Link to="/"></Link>
-        <Button   style={style} component={Link} to="/basic/Education">
+        <Link to="/cv-online"></Link>
+        <Button   style={style} component={Link} to="/cv-online/basic/Education">
           Next
         </Button>
         <Button

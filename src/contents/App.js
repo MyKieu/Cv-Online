@@ -23,7 +23,7 @@ return (
   <div className= "left">
       <div className='headerLeft'>
 
-          <Link to="/" style={{ textAlign: "left" }}>
+          <Link to="/cv-online" style={{ textAlign: "left" }}>
               <img src={logo} alt="logo" className="img2" />
           </Link>
       </div>
@@ -50,8 +50,8 @@ function App() {
       <ContentProvider>
         <BrowserRouter>
           <Switch>
-            <Route path="/" component={Templates} exact />
-            <Route path="/basic" component={Basic} />
+            <Route path="/cv-online" component={Templates} exact />
+            <Route path="/cv-online/basic" component={Basic} />
           </Switch>
         </BrowserRouter>
         <Right />

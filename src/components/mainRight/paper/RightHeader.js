@@ -16,7 +16,9 @@ function RightHeader() {
     <div>
       <div className="headerR">
         <div className="contentHeader">
-          <h1 className="h1Name">{contentUse.header.name}</h1>
+          <h1 className="h1Name">{contentUse.header.name}
+          </h1>
+           <img src ={contentUse.header.img} alt=''></img>
           <p>
             {contentUse.header.gender} <br />
             {contentUse.header.email} <br />

@@ -49,7 +49,7 @@ function Right() {
     <div className="right">
 
       <div >
-        <Link href="#" onClick={handleDeleteDate}>
+        <Link href="/cv-online" onClick={handleDeleteDate}>
           <Tooltip title="Delete All Data" placement="right">
             <Avatar className={classes.pink}>
               <ClearIcon />
@@ -57,7 +57,7 @@ function Right() {
           </Tooltip>
         </Link>
         
-        <Link href="/">
+        <Link href="/cv-online">
           <Tooltip title="View" placement="right">
             <Avatar className={classes.green}></Avatar>
           </Tooltip>
