@@ -47,8 +47,8 @@ function App() {
       <ContentProvider>
         <BrowserRouter>
           <Switch>
-            <Route path="/" component={Templates} exact />
-            <Route path="/basic" component={Basic} />
+            <Route path="/cv-online" component={Templates} exact />
+            <Route path="/cv-online/basic" component={Basic} />
           </Switch>
         </BrowserRouter>
         <Right />
