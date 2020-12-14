@@ -1,15 +1,14 @@
-import { Button, TextField } from "@material-ui/core";
+import { Button,TextField } from "@material-ui/core";
 import { Context } from "../../contexts/context";
 import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
-import "./style.css";
+import './style.css'
 import { Link } from "react-router-dom";
 const style = {
   marginTop: 12,
   marginLeft: 8,
   marginRight: 8,
 };
-
 function Header() {
   const { content, updateHeaderData, removeData } = useContext(Context);
   const { register, handleSubmit, errors } = useForm();
@@ -19,13 +18,13 @@ function Header() {
     removeData();
     updateHeaderData(data);
   };
-  const handleDelete= (dataLocal) => {
-    
-    localStorage.clear(dataLocal);
+  const handleDelete= (event) => {
+    event.preventDefault();
     setContent({
+      ...content,
      header:{},
     });
-    
+    window.location.reload();
   };
   return (
     <div className="">
@@ -44,7 +43,18 @@ function Header() {
         {errors.name && errors.name.type === "required" && (
           <p>Please not empty</p>
         )}
-      
+        <TextField
+          id="outlined-basic"
+          label="Image"
+          name="img"
+          type='text'
+          variant="outlined"
+          defaultValue={content.header.img}
+          inputRef={register}
+         className='img'
+         style={style}
+          onChange={handleSubmit(onSubmit)}
+        />
         {/* <TextField
           id="outlined-basic"
           label="Gender"
@@ -56,20 +66,17 @@ function Header() {
           style={style}
           onChange={handleSubmit(onSubmit)}
         /> */}
-  
         <select 
           className='gender'
           style={style}
-          name="gender"
+          name='gender'
           ref={register}
           onChange={handleSubmit(onSubmit)}
         >
-          
+          <option value=''disabled selected>Choose your gender</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
-          
         </select>
-      
         <TextField
           id="outlined-basic"
           label="Email"
@@ -121,8 +128,10 @@ function Header() {
           style={style}
           onChange={handleSubmit(onSubmit)}
         />
-        <Link to="/"></Link>
-        <Button component={Link} to="/basic/Education">
+        <Link to="/cv-online"></Link>
+        <Button  className="waves-effect waves-light btn" 
+        style={style}
+         component={Link} to="/cv-online/basic/Education">
           Next
         </Button>
         <Button
@@ -131,7 +140,7 @@ function Header() {
           color="secondary"
           disableElevation
           style={style}
-          onclick={handleDelete}
+          onClick={handleDelete}
         >
           Delete
         </Button>

@@ -17,19 +17,25 @@ hr {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
  }
 img {
-    width: 120px;
-    margin-top: 15px;
+    width: 150px;
     margin-left: 20px;
+    float: left;
+    background-image: url("https://i.pinimg.com/originals/19/4d/64/194d64c0df7b4753c5e190edf5fd4be6.jpg");
+    background-repeat: no-repeat;
 }
 .topLeft {
     display: flex;
     padding: 15px;
     text-align: center;
     justify-content: space-evenly;
+   background-color: rgb(119, 221, 247);
+    border-radius:2px;
   }
   .headerLeft {
     display: flex;
+    background-color: rgb(226, 224, 115);
     justify-content: space-between;
+    font-size: 10px;
   }
   
   .hr2 {
@@ -42,6 +48,7 @@ img {
   }
   .formsSection {
     margin: 25px;
+
   }
   
   .formStyle {
@@ -58,7 +65,7 @@ img {
     width: 170px;
     margin-left: 20px;
   }
-  
+ 
   .templateCard {
     display: flex;
     flex-direction: column;
@@ -88,4 +95,7 @@ img {
   border-radius: 4px;
   border: 1px solid #dadada;
   font-size: 15px;
+}
+.btt1{
+  background-color: aqua;
 }

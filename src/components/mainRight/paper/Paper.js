@@ -4,26 +4,25 @@ import RightExperience from "./RightExperience";
 import RightHeader from "./RightHeader";
 import RightSkill from "./RightSkill";
 import "../rightStyle.css";
-import PdfContainer from "contents/SavePDF/PdfContainer";
-import { savePDF } from "@progress/kendo-react-pdf";
+;
 function Paper() {
-  const createPdf = (html) => {
-    savePDF(html, {
-      paperSize: "A4",
-      fileName: "cv.pdf",
-      margin: 3,
-    });
-  };
+  // const createPdf = (html) => {
+  //   savePDF(html, {
+  //     paperSize: "A4",
+  //     fileName: "cv.pdf",
+  //     margin: 3,
+  //   });
+  // };
 
   return (
     <div className="paper">
       <div style={{ size: "A4" }}>
-        <PdfContainer createPdf={createPdf}>
+        {/* <PdfContainer createPdf={createPdf}> */}
           <RightHeader />
           <RightEducation />
           <RightExperience />
           <RightSkill />
-        </PdfContainer>
+        {/* </PdfContainer> */}
       
       </div>
     </div>

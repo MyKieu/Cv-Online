@@ -11,12 +11,13 @@ function RightHeader() {
   } else {
     contentUse = content;
   }
-
   return (
     <div>
       <div className="headerR">
         <div className="contentHeader">
-          <h1 className="h1Name">{contentUse.header.name}</h1>
+          <h3 className="h1Name">{contentUse.header.name}
+          <img  src= {contentUse.header.img} alt="" />
+         </h3>
           <p>
             {contentUse.header.gender} <br />
             {contentUse.header.email} <br />

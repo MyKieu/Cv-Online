@@ -11,7 +11,7 @@ const style = {
 };
 
 function Experience() {
-  const { content, updateExperienceData, removeData } = useContext(Context);
+  const { content, updateExperienceData, removeData ,setContent} = useContext(Context);
   const [Text, setText] = useState("Add");
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
@@ -20,6 +20,14 @@ function Experience() {
     removeData();
     setText("Update");
   };
+  const handleDeleteExp=(e)=>{
+ e.preventDefault();
+ setContent({
+   ...content,
+   experience:{ description: ["", "", ""], description2: ["", ""] },
+ })
+ window.location.reload();
+  }
   return (
     <div className="experience">
       <h2>Professional Experience</h2>
@@ -166,15 +174,26 @@ function Experience() {
           color="secondary"
           disableElevation
           style={style}
+         
         >
           {Text}
         </Button>
-        <Link to="/"></Link>
-        <Button component={Link} to="/basic/addittional">
+        <Link to="/cv-online"></Link>
+        <Button style={style} component={Link} to="/cv-online/basic/addittional">
           Next
         </Button>
-        <Link to='/'/>
-        <Button component={Link} to='/basic/Education'>Preview</Button>
+        <Link to='/cv-online'/>
+        <Button style={style} component={Link} to='/cv-online/basic/Education'>Previous</Button>
+        <Button
+          type="submit"
+          variant="contained"
+          color="secondary"
+          disableElevation
+          style={style}
+          onClick={handleDeleteExp}
+        >
+          Delete
+        </Button>
       </form>
     </div>
   );

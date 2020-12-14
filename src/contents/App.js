@@ -6,9 +6,6 @@ import { Button, makeStyles } from '@material-ui/core';
 import logo from '../asset/logoCV.jpg';
 import logoClick from '../asset/logoClick.jpg';
 import ContentProvider from 'contexts/context';
-
-
-
 function Templates() {
   const useStyles = makeStyles({
     headerLink: {
@@ -23,7 +20,7 @@ return (
   <div className= "left">
       <div className='headerLeft'>
 
-          <Link to="/" style={{ textAlign: "left" }}>
+          <Link to="/cv-online" style={{ textAlign: "left" }}>
               <img src={logo} alt="logo" className="img2" />
           </Link>
       </div>
@@ -32,7 +29,7 @@ return (
           <Button
             className={classes.headerLink}
             component={Link}
-            to="/basic/header"
+            to="/cv-online/basic/header"
           >
             Create CV
           </Button>
